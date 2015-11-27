@@ -4,7 +4,10 @@
   "description": "just learn for ci",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm run lint && npm run test-ci",
+    "test-ci": "taper tests/test-*.js",
+    "test-cov": "istanbul cover tape tests/test-*.js",
+    "lint": "eslint *.js && echo Lint passed."
   },
   "repository": {
     "type": "git",
@@ -15,5 +18,15 @@
   "bugs": {
     "url": "https://github.com/shenqihui/node-ci-test/issues"
   },
-  "homepage": "https://github.com/shenqihui/node-ci-test#readme"
+  "homepage": "https://github.com/shenqihui/node-ci-test#readme",
+  "dependencies": {
+    "request": "^2.67.0",
+    "tape": "^4.2.2"
+  },
+  "devDependencies": {
+    "coveralls": "^2.11.4",
+    "istanbul": "^0.4.1",
+    "tape": "^4.2.2",
+    "taper": "^0.5.0"
+  }
 }
