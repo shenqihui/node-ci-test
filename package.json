@@ -25,6 +25,7 @@
   },
   "devDependencies": {
     "coveralls": "^2.11.4",
+    "eslint": "^1.10.1",
     "istanbul": "^0.4.1",
     "tape": "^4.2.2",
     "taper": "^0.5.0"
